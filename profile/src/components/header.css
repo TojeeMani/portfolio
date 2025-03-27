@@ -1,0 +1,88 @@
+/* Header.css */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar.is-primary {
+  background: linear-gradient(90deg, #00d1b2, #00c4a7);
+}
+
+.navbar-brand .navbar-item:hover {
+  background: transparent !important;
+}
+
+.navbar-item {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.navbar-burger {
+  height: 4rem;
+  width: 4rem;
+}
+
+.navbar-burger span {
+  height: 2px;
+  width: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-burger.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.button.is-light {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 0 1.5rem;
+}
+
+.button.is-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+    animation: slideDown 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-item {
+    text-align: center;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
